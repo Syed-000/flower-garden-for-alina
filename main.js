@@ -32,6 +32,7 @@ function drawPetals() {
 }
 
 function drawFlower(x, y) {
+    // petals
     ctx.fillStyle = "#ff69b4";
     for (let i = 0; i < 6; i++) {
         let angle = i * (Math.PI / 3);
@@ -43,11 +44,13 @@ function drawFlower(x, y) {
         ctx.fill();
     }
 
+    // center
     ctx.fillStyle = "yellow";
     ctx.beginPath();
     ctx.arc(x, y, 6, 0, Math.PI * 2);
     ctx.fill();
 
+    // stem
     ctx.fillStyle = "green";
     ctx.fillRect(x - 2, y, 4, 20);
 
